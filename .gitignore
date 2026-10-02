@@ -1,0 +1,13 @@
+*
+!/dist/
+!/toolkit/
+!/toolkit/diary/
+!/.gitignore
+!/LICENSE
+!/README.md
+!/dist/THIRD_PARTY_NOTICES.txt
+!/dist/index.css
+!/dist/index.js
+!/manifest.json
+!/settings.html
+!/toolkit/diary/diary-panel.html
