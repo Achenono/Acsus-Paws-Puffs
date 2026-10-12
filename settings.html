@@ -9,6 +9,12 @@
 
     <div class="inline-drawer-content">
 
+      <div id="pp-storage-banner" class="pp-root pp-storage-banner" role="status" aria-live="polite"></div>
+      <div id="pp-phone-storage-banner" class="pp-root pp-storage-banner" role="status" aria-live="polite"></div>
+      <div id="pp-diary-storage-banner" class="pp-root pp-storage-banner" role="status" aria-live="polite"></div>
+      <div id="pp-beautify-storage-banner" class="pp-root pp-storage-banner" role="status" aria-live="polite"></div>
+      <div id="pp-font-storage-banner" class="pp-root pp-storage-banner" role="status" aria-live="polite"></div>
+
       <!-- 标签页导航 -->
       <div class="paws-tabs">
         <div class="paws-tab active" data-tab="simulated-life">模拟人生</div>
@@ -279,28 +285,27 @@
                   <span class="chat-tools-hint">在用户、角色和旁白消息的操作区加入导出入口</span>
                 </div>
 
-                <div class="chat-tools-setting-item">
-                  <span class="chat-tools-label">存储状态</span>
-                  <span class="chat-tools-hint" data-repo-status role="status" aria-live="polite">等待读取 Repo 用户文件。</span>
-                  <span class="chat-tools-hint" data-repo-error role="alert" hidden></span>
-                </div>
-
-                <div class="chat-tools-actions">
-                  <button type="button" class="menu_button" data-repo-reload>
-                    <i class="fa-solid fa-rotate"></i>
-                    <span>重新读取</span>
-                  </button>
-                  <button type="button" class="menu_button" data-repo-recover hidden>
-                    <i class="fa-solid fa-triangle-exclamation"></i>
-                    <span>恢复默认设置</span>
-                  </button>
-                </div>
-
-                <div class="chat-tools-setting-item" data-repo-recovery-confirmation hidden>
-                  <p>恢复会以默认设置覆盖 Repo 用户文件，且无法自动撤销。</p>
+                <div data-repo-feedback hidden>
+                  <div class="chat-tools-setting-item">
+                    <span class="chat-tools-hint" data-repo-status role="status" aria-live="polite" hidden></span>
+                    <span class="chat-tools-hint" data-repo-error role="alert" hidden></span>
+                  </div>
                   <div class="chat-tools-actions">
-                    <button type="button" class="menu_button" data-repo-recovery-confirm>确认恢复默认设置</button>
-                    <button type="button" class="menu_button" data-repo-recovery-cancel>取消</button>
+                    <button type="button" class="menu_button" data-repo-reload hidden>
+                      <i class="fa-solid fa-rotate"></i>
+                      <span>重新读取</span>
+                    </button>
+                    <button type="button" class="menu_button" data-repo-recover hidden>
+                      <i class="fa-solid fa-triangle-exclamation"></i>
+                      <span>恢复默认设置</span>
+                    </button>
+                  </div>
+                  <div class="chat-tools-setting-item" data-repo-recovery-confirmation hidden>
+                    <p>恢复会以默认设置覆盖 Repo 用户文件，且无法自动撤销。</p>
+                    <div class="chat-tools-actions">
+                      <button type="button" class="menu_button" data-repo-recovery-confirm>确认恢复默认设置</button>
+                      <button type="button" class="menu_button" data-repo-recovery-cancel>取消</button>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -1195,7 +1200,7 @@
                 </div>
                 <div class="about-info-item">
                   <span class="about-label">版本</span>
-                  <span class="about-value">2.0.0</span>
+                  <span class="about-value" id="pp-extension-version"></span>
                 </div>
                 <div class="about-info-item">
                   <span class="about-label">作者</span>
@@ -1263,6 +1268,10 @@
             </div>
           </div>
         </div>
+        <details class="pp-root pp-data-management-disclosure">
+          <summary>备份与恢复</summary>
+          <div id="pp-data-management"></div>
+        </details>
       </div>
 
     </div>
