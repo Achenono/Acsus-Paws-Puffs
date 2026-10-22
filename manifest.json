@@ -6,7 +6,7 @@
   "js": "dist/index.js",
   "css": "dist/index.css",
   "author": "AcSus",
-  "version": "2.1.4",
+  "version": "2.1.5",
   "homePage": "https://github.com/Achenono/Acsus-Paws-Puffs",
   "auto_update": false
 }
