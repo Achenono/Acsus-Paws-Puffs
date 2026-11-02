@@ -489,68 +489,148 @@
                 </div>
               </div>
               <div class="beautify-accordion-body">
-                <div class="beautify-setting-item">
-                  <label class="checkbox_label">
-                    <input type="checkbox" id="beautify-floating-btn-enabled">
-                    <span>顶栏隐藏按钮</span>
-                  </label>
-                  <span class="beautify-hint">显示可拖动的悬浮按钮，用于隐藏/显示顶部工具栏</span>
+          <div class="pp-root pp-fcard-stack">
+
+            <section class="pp-fcard" id="pp-fb-card" aria-labelledby="pp-fb-title">
+              <header class="pp-fcard-head">
+                <span class="pp-fcard-icon" aria-hidden="true"><i class="fa-solid fa-circle-dot"></i></span>
+                <div class="pp-fcard-titles">
+                  <h4 class="pp-fcard-title" id="pp-fb-title">顶栏隐藏按钮</h4>
+                  <p class="pp-fcard-sub">点一下收起顶栏，按住拖动</p>
                 </div>
-
-                <!-- 悬浮按钮外观设置 -->
-                <div class="floating-btn-settings">
-                  <!-- 大小滑块 -->
-                  <div class="floating-btn-setting-row">
-                    <label>
-                      <i class="fa-solid fa-expand"></i>
-                      <span>大小</span>
-                    </label>
-                    <input type="range" id="floating-btn-size" min="0" max="300" value="38">
-                    <span class="floating-btn-value" id="floating-btn-size-value">38px</span>
-                  </div>
-
-                  <!-- 颜色选择器（使用官方 RGBA 颜色选择器） -->
-                  <div class="floating-btn-setting-row">
-                    <label>
-                      <i class="fa-solid fa-palette"></i>
-                      <span>图标颜色</span>
-                    </label>
-                    <div class="floating-btn-color-wrapper">
-                      <toolcool-color-picker id="floating-btn-color"
-                        color="rgba(255, 255, 255, 1)"></toolcool-color-picker>
-                      <button class="floating-btn-reset-color" id="floating-btn-reset-color" title="重置为主题色">
-                        <i class="fa-solid fa-rotate-left"></i>
-                      </button>
-                    </div>
-                  </div>
-
-                  <!-- 自定义图片 -->
-                  <div class="floating-btn-image-section">
-                    <div class="floating-btn-image-preview" id="floating-btn-image-preview">
-                      <i class="fa-solid fa-image"></i>
-                    </div>
-                    <div class="floating-btn-image-actions">
-                      <button class="beautify-popup-btn" id="floating-btn-set-image">
-                        <i class="fa-solid fa-image"></i>
-                        <span>设置图片</span>
-                      </button>
-                    </div>
-                  </div>
-
-                  <!-- 复位按钮位置 -->
-                  <div class="floating-btn-reset-section">
-                    <button class="beautify-popup-btn" id="floating-btn-reset-position">
-                      <i class="fa-solid fa-location-crosshairs"></i>
-                      <span>复位按钮位置</span>
+                <input type="checkbox" class="pp-ctl-switch" id="beautify-floating-btn-enabled" role="switch" aria-labelledby="pp-fb-title">
+              </header>
+              <div class="pp-fcard-fold">
+                <div class="pp-fcard-body">
+                  <div class="pp-fcard-tiles" role="group" aria-label="按钮图片，点开可更换">
+                    <button type="button" class="pp-fcard-tile" id="floating-btn-set-image" data-fb-tab="static" aria-haspopup="dialog">
+                      <span class="pp-fcard-tile-visual is-image" id="floating-btn-image-preview"><i class="fa-solid fa-image"></i></span>
+                      <span class="pp-fcard-tile-label">待机图</span>
+                      <span class="pp-fcard-tile-sub" id="pp-fb-static-sub">未设置</span>
                     </button>
-                    <span class="beautify-hint">按钮跑到屏幕外时点击复位</span>
+                    <button type="button" class="pp-fcard-tile" id="pp-fb-open-gif" data-fb-tab="gif" aria-haspopup="dialog">
+                      <span class="pp-fcard-tile-visual is-image" id="pp-fb-gif-preview"><i class="fa-solid fa-hand-pointer"></i></span>
+                      <span class="pp-fcard-tile-label">点击动画</span>
+                      <span class="pp-fcard-tile-sub" id="pp-fb-gif-sub">未设置</span>
+                    </button>
+                    <button type="button" class="pp-fcard-tile" id="pp-fb-open-waiting" data-fb-tab="waiting" aria-haspopup="dialog">
+                      <span class="pp-fcard-tile-visual is-image" id="pp-fb-waiting-preview"><i class="fa-solid fa-spinner"></i></span>
+                      <span class="pp-fcard-tile-label">等待动画</span>
+                      <span class="pp-fcard-tile-sub" id="pp-fb-waiting-sub">未设置</span>
+                    </button>
+                  </div>
+                  <div class="pp-fcard-row">
+                    <span class="pp-fcard-label" id="pp-fb-size-label">大小</span>
+                    <div class="pp-ctl-stepper" data-pp-stepper>
+                      <button type="button" class="pp-ctl-stepper-btn" data-step="-2" aria-label="缩小"><i class="fa-solid fa-minus"></i></button>
+                      <label class="pp-ctl-stepper-field">
+                        <input type="number" class="pp-ctl-stepper-input" id="floating-btn-size" min="0" max="300" step="2" value="38" inputmode="numeric" aria-labelledby="pp-fb-size-label">
+                        <span class="pp-ctl-stepper-unit">px</span>
+                      </label>
+                      <button type="button" class="pp-ctl-stepper-btn" data-step="2" aria-label="放大"><i class="fa-solid fa-plus"></i></button>
+                    </div>
+                    <button type="button" class="pp-ctl-btn" id="floating-btn-reset-position" title="按钮跑到屏幕外时点这里"><i class="fa-solid fa-location-crosshairs"></i><span>复位</span></button>
                   </div>
                 </div>
+              </div>
+            </section>
 
-                <div class="beautify-feature-preview">
-                  <i class="fa-solid fa-hand-pointer"></i>
-                  <span>点击切换沉浸模式，拖动可调整位置</span>
+            <section class="pp-fcard" id="pp-click-fx-settings" aria-labelledby="pp-click-fx-heading">
+              <header class="pp-fcard-head">
+                <span class="pp-fcard-icon" aria-hidden="true"><i class="fa-solid fa-wand-magic-sparkles"></i></span>
+                <div class="pp-fcard-titles">
+                  <h4 class="pp-fcard-title" id="pp-click-fx-heading">屏幕点击特效</h4>
+                  <p class="pp-fcard-sub">点屏幕空白处才会冒出来</p>
                 </div>
+                <input type="checkbox" class="pp-ctl-switch" id="pp-click-fx-enabled" role="switch" aria-labelledby="pp-click-fx-heading">
+              </header>
+              <div class="pp-fcard-fold">
+                <div class="pp-fcard-body">
+                  <div class="pp-fcard-tiles" role="group" aria-label="当前特效，点开可更换">
+                    <button type="button" class="pp-fcard-tile" id="pp-click-fx-open-touch" data-fxs-tab="touch" aria-haspopup="dialog">
+                      <span class="pp-fcard-tile-visual" id="pp-click-fx-touch-preview"></span>
+                      <span class="pp-fcard-tile-label">触点</span>
+                      <span class="pp-fcard-tile-sub" id="pp-click-fx-touch-sub"></span>
+                    </button>
+                    <button type="button" class="pp-fcard-tile" id="pp-click-fx-open-images" data-fxs-tab="images" aria-haspopup="dialog">
+                      <span class="pp-fcard-tile-visual" id="pp-click-fx-images-preview"></span>
+                      <span class="pp-fcard-tile-label">图片</span>
+                      <span class="pp-fcard-tile-sub" id="pp-click-fx-images-sub"></span>
+                    </button>
+                    <button type="button" class="pp-fcard-tile" id="pp-click-fx-open-motion" data-fxs-tab="motion" aria-haspopup="dialog">
+                      <span class="pp-fcard-tile-visual" id="pp-click-fx-motion-preview"></span>
+                      <span class="pp-fcard-tile-label">动作</span>
+                      <span class="pp-fcard-tile-sub" id="pp-click-fx-motion-sub"></span>
+                    </button>
+                  </div>
+                  <p class="pp-fcard-status" id="pp-click-fx-status" role="status" aria-live="polite"></p>
+                </div>
+              </div>
+              <template id="pp-click-fx-studio-template">
+                <dialog class="pp-root pp-fxs" aria-labelledby="pp-fxs-title"><div class="pp-fxs-app" style="display: contents"></div></dialog>
+              </template>
+<template id="pp-click-fx-css-template">
+                    <dialog class="pp-root beautify-popup pp-click-fx-dialog pp-click-fx-css-dialog" aria-labelledby="pp-click-fx-css-title" aria-modal="true">
+                      <div class="beautify-popup-header">
+                        <h3 class="pp-click-fx-dialog-title" id="pp-click-fx-css-title"><i class="fa-solid fa-code" aria-hidden="true"></i> 自定义特效 CSS</h3>
+                        <button type="button" class="beautify-popup-close" data-pp-click-fx-close aria-label="关闭 CSS 编辑器"><i class="fa-solid fa-xmark" aria-hidden="true"></i></button>
+                      </div>
+                      <div class="beautify-popup-content pp-click-fx-dialog-body">
+                        <label class="pp-click-fx-field" for="pp-click-fx-css-schemes"><span>已有方案</span>
+                          <select id="pp-click-fx-css-schemes"><option value="">当前 CSS / 新方案</option></select>
+                        </label>
+                        <label class="pp-click-fx-field" for="pp-click-fx-css-name"><span>方案名称</span>
+                          <input type="text" id="pp-click-fx-css-name" maxlength="80" placeholder="给特效起个名字">
+                        </label>
+                        <div class="pp-click-fx-toolbar">
+                          <button type="button" class="beautify-popup-btn pp-click-fx-action" id="pp-click-fx-css-save-as"><i class="fa-solid fa-plus" aria-hidden="true"></i> 另存为</button>
+                          <button type="button" class="beautify-popup-btn pp-click-fx-action" id="pp-click-fx-css-import"><i class="fa-solid fa-file-import" aria-hidden="true"></i> 导入</button>
+                          <button type="button" class="beautify-popup-btn pp-click-fx-action" id="pp-click-fx-css-export"><i class="fa-solid fa-file-export" aria-hidden="true"></i> 导出</button>
+                          <button type="button" class="beautify-popup-btn pp-click-fx-action" id="pp-click-fx-css-delete"><i class="fa-solid fa-trash" aria-hidden="true"></i> 删除方案</button>
+                          <input type="file" id="pp-click-fx-css-file" accept=".json,.css,application/json,text/css" hidden>
+                        </div>
+                        <label class="pp-click-fx-field" for="pp-click-fx-css"><span>特效 CSS</span></label>
+                        <textarea id="pp-click-fx-css" class="pp-click-fx-css" rows="12" spellcheck="false" aria-describedby="pp-click-fx-css-help" placeholder=".pp-click-ripple { border-color: pink; }"></textarea>
+                        <p class="pp-click-fx-hint">选择或导入只载入草稿；保存并应用后生效，并以方案名加入图片特效模式。自定义方案沿用最近选择的内置轨迹。</p>
+                        <details class="pp-click-fx-css-help" id="pp-click-fx-css-help">
+                          <summary>可用类名与变量</summary>
+                          <p class="pp-click-fx-hint">仅作用于特效图层 .pp-click-fx-layer；每次点击 .pp-click-burst；触点 .pp-click-ripple / .pp-click-sparkle；图片 .pp-click-particle；飘字 .pp-click-word；滑动轨迹使用独立画布，不受此 CSS 影响；可按 [data-fx]、[data-shape]、[data-tone] 选样式、形状和色调。--pp-fx-color 为当前特效颜色。支持导入命名 JSON 或 .css 文件（上限 1 MB），导出 JSON 会保留名称。</p>
+                        </details>
+                        <p class="pp-click-fx-hint pp-click-fx-status" id="pp-click-fx-css-status" role="status" aria-live="polite"></p>
+                      </div>
+                      <div class="pp-click-fx-dialog-footer"><button type="button" class="beautify-popup-btn pp-click-fx-action" id="pp-click-fx-save-css"><i class="fa-solid fa-check" aria-hidden="true"></i> 保存并应用</button></div>
+                    </dialog>
+                  </template>
+            </section>
+            <section class="pp-fcard" id="pp-trail-card" aria-labelledby="pp-trail-heading">
+              <header class="pp-fcard-head">
+                <span class="pp-fcard-icon" aria-hidden="true"><i class="fa-solid fa-signature"></i></span>
+                <div class="pp-fcard-titles">
+                  <h4 class="pp-fcard-title" id="pp-trail-heading">滑动轨迹</h4>
+                  <p class="pp-fcard-sub">鼠标划过、手指滑过时留下光带</p>
+                </div>
+                <input type="checkbox" class="pp-ctl-switch" id="pp-trail-enabled" role="switch" aria-labelledby="pp-trail-heading">
+              </header>
+              <div class="pp-fcard-fold">
+                <div class="pp-fcard-body">
+                  <button type="button" class="pp-fcard-wide" id="pp-trail-open" data-fxs-tab="trail" aria-haspopup="dialog">
+                    <canvas class="pp-fcard-wide-visual" id="pp-trail-preview" aria-hidden="true"></canvas>
+                    <span class="pp-fcard-wide-text"><span class="pp-fcard-tile-label">样式</span><span class="pp-fcard-tile-sub" id="pp-trail-sub"></span></span>
+                    <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+                  </button>
+                  <div class="pp-fcard-row">
+                    <span class="pp-fcard-label" id="pp-trail-device-label">显示在</span>
+                    <div class="pp-ctl-chips" role="group" aria-labelledby="pp-trail-device-label">
+                      <button type="button" class="pp-ctl-chip" data-trail-device="mouse" aria-pressed="true" title="用鼠标时一直跟着"><i class="fa-solid fa-computer-mouse"></i><span>电脑</span></button>
+                      <button type="button" class="pp-ctl-chip" data-trail-device="touch" aria-pressed="true" title="手指滑动时出现；手机卡就关掉这个"><i class="fa-solid fa-mobile-screen-button"></i><span>手机</span></button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <p id="pp-trail-status" class="pp-fcard-status" role="status" aria-live="polite"></p>
+            </section>
+
+          </div>
               </div>
             </div>
 
