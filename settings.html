@@ -395,38 +395,6 @@
               <template id="pp-click-fx-studio-template">
                 <dialog class="pp-root pp-fxs" aria-labelledby="pp-fxs-title"><div class="pp-fxs-app" style="display: contents"></div></dialog>
               </template>
-<template id="pp-click-fx-css-template">
-                    <dialog class="pp-root beautify-popup pp-click-fx-dialog pp-click-fx-css-dialog" aria-labelledby="pp-click-fx-css-title" aria-modal="true">
-                      <div class="beautify-popup-header">
-                        <h3 class="pp-click-fx-dialog-title" id="pp-click-fx-css-title"><i class="fa-solid fa-code" aria-hidden="true"></i> 自定义特效 CSS</h3>
-                        <button type="button" class="beautify-popup-close" data-pp-click-fx-close="" aria-label="关闭 CSS 编辑器"><i class="fa-solid fa-xmark" aria-hidden="true"></i></button>
-                      </div>
-                      <div class="beautify-popup-content pp-click-fx-dialog-body">
-                        <label class="pp-click-fx-field" for="pp-click-fx-css-schemes"><span>已有方案</span>
-                          <select id="pp-click-fx-css-schemes"><option value="">当前 CSS / 新方案</option></select>
-                        </label>
-                        <label class="pp-click-fx-field" for="pp-click-fx-css-name"><span>方案名称</span>
-                          <input type="text" id="pp-click-fx-css-name" maxlength="80" placeholder="给特效起个名字">
-                        </label>
-                        <div class="pp-click-fx-toolbar">
-                          <button type="button" class="beautify-popup-btn pp-click-fx-action" id="pp-click-fx-css-save-as"><i class="fa-solid fa-plus" aria-hidden="true"></i> 另存为</button>
-                          <button type="button" class="beautify-popup-btn pp-click-fx-action" id="pp-click-fx-css-import"><i class="fa-solid fa-file-import" aria-hidden="true"></i> 导入</button>
-                          <button type="button" class="beautify-popup-btn pp-click-fx-action" id="pp-click-fx-css-export"><i class="fa-solid fa-file-export" aria-hidden="true"></i> 导出</button>
-                          <button type="button" class="beautify-popup-btn pp-click-fx-action" id="pp-click-fx-css-delete"><i class="fa-solid fa-trash" aria-hidden="true"></i> 删除方案</button>
-                          <input type="file" id="pp-click-fx-css-file" accept=".json,.css,application/json,text/css" hidden="">
-                        </div>
-                        <label class="pp-click-fx-field" for="pp-click-fx-css"><span>特效 CSS</span></label>
-                        <textarea id="pp-click-fx-css" class="pp-click-fx-css" rows="12" spellcheck="false" aria-describedby="pp-click-fx-css-help" placeholder=".pp-click-ripple { border-color: pink; }"></textarea>
-                        <p class="pp-click-fx-hint">选择或导入只载入草稿；保存并应用后生效，并以方案名加入图片特效模式。自定义方案沿用最近选择的内置轨迹。</p>
-                        <details class="pp-click-fx-css-help" id="pp-click-fx-css-help">
-                          <summary>可用类名与变量</summary>
-                          <p class="pp-click-fx-hint">仅作用于特效图层 .pp-click-fx-layer；每次点击 .pp-click-burst；触点 .pp-click-ripple / .pp-click-sparkle；图片 .pp-click-particle；飘字 .pp-click-word；滑动轨迹使用独立画布，不受此 CSS 影响；可按 [data-fx]、[data-shape]、[data-tone] 选样式、形状和色调。--pp-fx-color 为当前特效颜色。支持导入命名 JSON 或 .css 文件（上限 1 MB），导出 JSON 会保留名称。</p>
-                        </details>
-                        <p class="pp-click-fx-hint pp-click-fx-status" id="pp-click-fx-css-status" role="status" aria-live="polite"></p>
-                      </div>
-                      <div class="pp-click-fx-dialog-footer"><button type="button" class="beautify-popup-btn pp-click-fx-action" id="pp-click-fx-save-css"><i class="fa-solid fa-check" aria-hidden="true"></i> 保存并应用</button></div>
-                    </dialog>
-                  </template>
             </section>
             <section class="pp-fcard" id="pp-trail-card" aria-labelledby="pp-trail-heading">
               <header class="pp-fcard-head">
