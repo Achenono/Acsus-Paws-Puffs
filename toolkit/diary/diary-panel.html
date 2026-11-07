@@ -43,8 +43,14 @@
   </div>
 
   <!-- 展开式设置面板（默认隐藏） -->
-  <div class="diary-settings-panel" id="diarySettingsPanel">
-    <div class="diary-settings-content">
+  <div class="diary-settings-panel pp-root pp-diary-settings-shell" id="diarySettingsPanel">
+    <header class="pp-dlg-head">
+        <i class="fa-solid fa-gear" aria-hidden="true"></i>
+        <h3 class="pp-dlg-title">日记设置</h3>
+        <button type="button" class="pp-ctl-iconbtn pp-help" data-diary-help aria-label="日记系统说明"><i class="fa-solid fa-circle-question" aria-hidden="true"></i></button>
+        <button type="button" class="pp-ctl-iconbtn" data-diary-panel-close="settings" aria-label="关闭"><i class="fa-solid fa-xmark" aria-hidden="true"></i></button>
+      </header>
+    <div class="diary-settings-content pp-dlg-body">
 
       <!-- 标题：生成评论时包含的上下文 -->
       <div class="diary-setting-group-title">📝 生成评论时包含的上下文：</div>
@@ -516,7 +522,7 @@
   </div>
 
   <!-- 展开式视觉设置面板（默认隐藏） -->
-  <div class="diary-visual-settings-panel" id="diaryVisualPanel">
+  <div class="diary-visual-settings-panel pp-root pp-diary-settings-shell" id="diaryVisualPanel">
     <!-- 视觉设置内容将由 diary-visual-settings.js 动态生成 -->
   </div>
 
