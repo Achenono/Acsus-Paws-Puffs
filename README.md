@@ -1,6 +1,6 @@
 # 毛球点心铺 · Acsus-Paws-Puffs
 
-版本：2.1.19
+版本：2.1.20
 
 这是 SillyTavern 可直接安装的运行文件仓库。
 
